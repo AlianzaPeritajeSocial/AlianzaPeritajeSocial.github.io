@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Periciales Sociojurídicos: Justicia con Rigor y Empatía</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+            --text-primary: #0f172a;
+            --text-secondary: #334155;
+            --text-muted: #64748b;
+            --primary-blue: #1e3a8a;
+            --light-blue-bg: #f8fafc;
+            --accent-orange: #ff5e62;
+            --whatsapp-green: #22c55e;
+            --card-border: #e2e8f0;
+            --card-hover-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding: 2rem 1rem 4rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+            padding: 3rem 2.5rem;
+            overflow: hidden;
+            border: 1px solid #f1f5f9;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            line-height: 1.25;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        /* SECTION: RESPALDO PROFESIONAL */
+        .professional-section {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .illustration-container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .illustration-container img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .illustration-container img:hover {
+            transform: scale(1.03);
+        }
+
+        .professional-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .professional-content p.experience-summary {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .info-card {
+            display: flex;
+            gap: 1.2rem;
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            padding: 1.25rem;
+            border-radius: 16px;
+            margin-bottom: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
+        }
+
+        .info-card-svg {
+            flex-shrink: 0;
+            width: 54px;
+            height: 54px;
+        }
+
+        .info-card-text h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .info-card-text p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* SECTION TITLE */
+        .section-header {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        /* SECTION: ÁREAS DE ESPECIALIDAD */
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .specialty-card {
+            background: #f0f7ff;
+            border: 1px solid #d0e1fd;
+            border-radius: 20px;
+            padding: 1.75rem 1.25rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px -5px rgba(30, 58, 138, 0.1);
+            background: #e0f2fe;
+        }
+
+        .specialty-card svg {
+            margin-bottom: 1.25rem;
+            transition: transform 0.3s ease;
+        }
+
+        .specialty-card:hover svg {
+            transform: scale(1.1);
+        }
+
+        .specialty-card h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .specialty-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* SECTION: PROPUESTA ECONÓMICA */
+        .proposal-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+
+        /* Price Tag Left Side */
+        .price-tag-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff8f8;
+            border: 1px solid #ffe4e6;
+            border-radius: 24px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .price-tag-wrapper:hover {
+            transform: translateY(-2px);
+        }
+
+        .price-tag-content {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .price-tag-content h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-tag-content p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        /* Timeline Right Side */
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: #cbd5e1;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-icon-node {
+            position: absolute;
+            left: -38px;
+            top: 2px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .timeline-item.green-node .timeline-icon-node {
+            border-color: #22c55e;
+            color: #22c55e;
+        }
+
+        .timeline-item.red-node .timeline-icon-node {
+            border-color: #ff5e62;
+            color: #ff5e62;
+        }
+
+        .timeline-icon-node svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .timeline-content h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+
+        /* SECTION: CONTACT BANNER */
+        .contact-banner {
+            background: linear-gradient(135deg, #f97316 0%, #ec4899 55%, #4f46e5 100%);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            color: #ffffff;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
+            margin-bottom: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact-banner h2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .contact-banner h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .contact-banner p.contact-desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            max-width: 580px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.5;
+        }
+
+        /* WhatsApp Pill */
+        .whatsapp-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--whatsapp-green);
+            color: white;
+            padding: 0.85rem 1.75rem;
+            border-radius: 99px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.6);
+            background: #16a34a;
+        }
+
+        .whatsapp-pill a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .whatsapp-pill a:hover {
+            opacity: 0.85;
+        }
+
+        .separator {
+            opacity: 0.7;
+            margin: 0 0.25rem;
+        }
+
+        /* Email Row */
+        .email-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 0.6rem 1.5rem;
+            border-radius: 99px;
+            max-width: fit-content;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+        }
+
+        .email-row svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        .email-row a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .email-row a:hover {
+            opacity: 0.85;
+            text-decoration: underline;
+        }
+
+        /* BOTTOM QUOTE & MISSION */
+        .quote-section {
+            text-align: center;
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quote-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.45rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.35;
+        }
+
+        .mission-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* FOOTER BRANDING */
+        footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            padding-right: 0.5rem;
+        }
+
+        .branding {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            opacity: 0.75;
+            font-weight: 500;
+        }
+
+        .branding svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* RESPONSIVENESS */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .container {
+                border-radius: 20px;
+                padding: 2rem 1.25rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .subtitle {
+                font-size: 1.15rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .professional-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .specialties-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .proposal-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+
+            .contact-banner {
+                padding: 2rem 1rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .contact-banner h2 {
+                font-size: 1.4rem;
+            }
+
+            .contact-banner h3 {
+                font-size: 1rem;
+            }
+
+            .whatsapp-pill {
+                font-size: 0.85rem;
+                padding: 0.75rem 1.25rem;
+                flex-direction: column;
+                gap: 0.3rem;
+                border-radius: 20px;
+            }
+
+            .whatsapp-pill span.separator {
+                display: none;
+            }
+
+            .email-row {
+                flex-direction: column;
+                gap: 0.4rem;
+                border-radius: 16px;
+                padding: 0.8rem 1rem;
+                max-width: 100%;
+            }
+
+            .email-row span.separator {
+                display: none;
+            }
+
+            .quote-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>Servicios Periciales Sociojurídicos:<br>Justicia con Rigor y Empatía</h1>
+            <h2 class="subtitle">Experto Respaldo Profesional</h2>
+        </header>
+
+        <!-- SECTION: RESPALDO PROFESIONAL -->
+        <section class="professional-section">
+            <div class="illustration-container">
+                <img src="peritos_ilustracion.png" alt="Ilustración Profesional Peritos">
+            </div>
+            <div class="professional-content">
+                <h3>Más de 14 años de trayectoria promedio</h3>
+                <p class="experience-summary">
+                    Lissette González cuenta con 16 años de experiencia y Karla Apablaza con 12 años en intervención
+                    socio-jurídica de alta complejidad.
+                </p>
+
+                <!-- Card 1: Acreditación -->
+                <div class="info-card">
+                    <!-- Custom Certificate SVG -->
+                    <svg class="info-card-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Certificate Base -->
+                        <rect x="15" y="15" width="70" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6"
+                            stroke-width="4" />
+                        <!-- Lines representing writing -->
+                        <line x1="28" y1="30" x2="60" y2="30" stroke="#94a3b8" stroke-width="4"
+                            stroke-linecap="round" />
+                        <line x1="28" y1="42" x2="52" y2="42" stroke="#94a3b8" stroke-width="4"
+                            stroke-linecap="round" />
+                        <line x1="28" y1="54" x2="72" y2="54" stroke="#94a3b8" stroke-width="4"
+                            stroke-linecap="round" />
+                        <!-- Gold Seal with Ribbon -->
+                        <circle cx="70" cy="35" r="10" fill="#f59e0b" />
+                        <polygon points="66,42 70,55 74,42" fill="#ef4444" />
+                    </svg>
+                    <div class="info-card-text">
+                        <h4>Acreditación en Cortes de Apelaciones</h4>
+                        <p>Ambas profesionales están habilitadas en el Registro Oficial de Peritos del Poder Judicial,
+                            cubriendo las 17 jurisdicciones del país.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Formación -->
+                <div class="info-card">
+                    <!-- Custom Graduation/Books SVG -->
+                    <svg class="info-card-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Books Stack -->
+                        <rect x="22" y="66" width="56" height="8" rx="2" fill="#3b82f6" />
+                        <rect x="18" y="58" width="64" height="8" rx="2" fill="#ef4444" />
+                        <rect x="25" y="50" width="50" height="8" rx="2" fill="#10b981" />
+                        <!-- Graduation Cap -->
+                        <polygon points="50,16 82,28 50,40 18,28" fill="#1e293b" />
+                        <rect x="42" y="32" width="16" height="12" fill="#1e293b" />
+                        <circle cx="50" cy="43" r="8" fill="#1e293b" />
+                        <!-- Tassel -->
+                        <path d="M 82,28 L 82,45 C 82,45 80,48 78,44" fill="none" stroke="#f59e0b" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                    <div class="info-card-text">
+                        <h4>Formación Académica de Excelencia</h4>
+                        <p>El equipo integra formación de Magíster y Doctorado con especializaciones en Trauma Complejo,
+                            Mediación y Derechos Humanos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ÁREAS DE ESPECIALIDAD PERICIAL -->
+        <section>
+            <h3 class="section-header">Áreas de Especialidad Pericial</h3>
+            <div class="specialties-grid">
+                <!-- Specialty 1 -->
+                <div class="specialty-card">
+                    <!-- Family Icon -->
+                    <svg viewBox="0 0 100 100" width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" fill="#e0f2fe" stroke="#bae6fd" stroke-width="2" />
+                        <!-- Family figure silhouettes -->
+                        <!-- Dad -->
+                        <circle cx="34" cy="38" r="6" fill="#0284c7" />
+                        <path d="M 26,62 L 26,50 C 26,46 30,44 34,44 C 38,44 42,46 42,50 L 42,62" fill="#0284c7" />
+                        <!-- Mom -->
+                        <circle cx="66" cy="38" r="6" fill="#ec4899" />
+                        <path d="M 58,62 L 58,50 C 58,46 62,44 66,44 C 70,44 74,46 74,50 L 74,62" fill="#ec4899" />
+                        <!-- Child -->
+                        <circle cx="50" cy="46" r="4.5" fill="#3b82f6" />
+                        <path d="M 44,62 L 44,53 C 44,51 46,50 50,50 C 54,50 56,51 56,53 L 56,62" fill="#3b82f6" />
+                    </svg>
+                    <h4>Tribunales de Familia</h4>
+                    <p>Peritajes especializados en cuidado personal, relación directa y regular, alimentos y
+                        compensación económica.</p>
+                </div>
+
+                <!-- Specialty 2 -->
+                <div class="specialty-card">
+                    <!-- Gavel Icon -->
+                    <svg viewBox="0 0 100 100" width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" fill="#e0f2fe" stroke="#bae6fd" stroke-width="2" />
+                        <!-- Gavel Shape -->
+                        <g transform="rotate(45 50 50)">
+                            <!-- Block -->
+                            <rect x="25" y="42" width="22" height="16" rx="3" fill="#0284c7" />
+                            <rect x="21" y="45" width="4" height="10" rx="1" fill="#bae6fd" />
+                            <rect x="47" y="45" width="4" height="10" rx="1" fill="#bae6fd" />
+                            <!-- Handle -->
+                            <rect x="45" y="48" width="34" height="4" rx="2" fill="#0284c7" />
+                            <!-- Base block -->
+                            <rect x="20" y="68" width="32" height="6" rx="2" fill="#0284c7" />
+                        </g>
+                    </svg>
+                    <h4>Tribunales Penales</h4>
+                    <p>Realización de informes de arraigo sociofamiliar para tribunales de Garantía y Tribunales de
+                        Juicio Oral en lo Penal (TOP).</p>
+                </div>
+
+                <!-- Specialty 3 -->
+                <div class="specialty-card">
+                    <!-- Scales Icon -->
+                    <svg viewBox="0 0 100 100" width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="46" fill="#e0f2fe" stroke="#bae6fd" stroke-width="2" />
+                        <!-- Scales Shape -->
+                        <g fill="#0284c7">
+                            <!-- Stand -->
+                            <rect x="48" y="24" width="4" height="46" rx="1" />
+                            <rect x="42" y="68" width="16" height="4" rx="1" />
+                            <rect x="36" y="72" width="28" height="4" rx="2" />
+                            <!-- Beam -->
+                            <rect x="24" y="30" width="52" height="4" rx="2" />
+                            <circle cx="50" cy="32" r="4" />
+                            <!-- Left scale -->
+                            <line x1="28" y1="34" x2="20" y2="52" stroke="#0284c7" stroke-width="2" />
+                            <line x1="28" y1="34" x2="36" y2="52" stroke="#0284c7" stroke-width="2" />
+                            <path d="M 16,52 C 16,58 40,58 40,52 Z" fill="#0284c7" />
+                            <!-- Right scale -->
+                            <line x1="72" y1="34" x2="64" y2="52" stroke="#0284c7" stroke-width="2" />
+                            <line x1="72" y1="34" x2="80" y2="52" stroke="#0284c7" stroke-width="2" />
+                            <path d="M 60,52 C 60,58 84,58 84,52 Z" fill="#0284c7" />
+                        </g>
+                    </svg>
+                    <h4>Tribunales Civiles y Laborales</h4>
+                    <p>Informes socioeconómicos, evaluación de daño moral y situaciones de vulnerabilidad sobreviniente.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PROPUESTA ECONÓMICA -->
+        <section>
+            <h3 class="section-header">Propuesta Económica y Accesibilidad</h3>
+            <div class="proposal-container">
+                <!-- Price Tag Card -->
+                <div class="price-tag-wrapper">
+                    <!-- Price Tag SVG -->
+                    <svg viewBox="0 0 200 200" width="130" height="130" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="tag-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="3" dy="6" stdDeviation="5" flood-color="#ff5e62"
+                                    flood-opacity="0.25" />
+                            </filter>
+                        </defs>
+                        <!-- String thread -->
+                        <path d="M 62,38 C 45,28 32,45 42,62" fill="none" stroke="#e2e8f0" stroke-width="4"
+                            stroke-linecap="round" />
+                        <g transform="rotate(-15, 100, 100)" filter="url(#tag-shadow)">
+                            <!-- Red tag card -->
+                            <path
+                                d="M 50,50 L 140,50 C 148,50 155,57 155,65 L 155,145 C 155,153 148,160 140,160 L 50,160 C 42,160 35,153 35,145 L 35,65 C 35,57 42,50 50,50 Z"
+                                fill="#ff5e62" />
+                            <!-- White dotted boundary -->
+                            <path
+                                d="M 53,53 L 137,53 C 142,53 147,58 147,63 L 147,142 C 147,147 142,152 137,152 L 53,152 C 48,152 43,147 43,142 L 43,63 C 43,58 48,53 53,53 Z"
+                                fill="none" stroke="white" stroke-width="2.5" stroke-dasharray="5,5" opacity="0.85" />
+                            <!-- String Hole -->
+                            <circle cx="55" cy="105" r="9" fill="#fff8f8" />
+                            <!-- Yellow dollar coin border -->
+                            <circle cx="105" cy="105" r="27" fill="#fff8f8" />
+                            <circle cx="105" cy="105" r="23" fill="#ffb703" />
+                            <!-- Dollar character -->
+                            <text x="105" y="114" font-family="'Outfit', sans-serif" font-weight="900" font-size="28"
+                                fill="white" text-anchor="middle">$</text>
+                        </g>
+                    </svg>
+
+                    <div class="price-tag-content">
+                        <h4>Arancel Diferenciado:<br>$200.000</h4>
+                        <p>Tarifa preferencial para peritajes sociales completos destinada a usuarios con ingresos
+                            líquidos de hasta $800.000.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline / Process list -->
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item green-node">
+                        <div class="timeline-icon-node">
+                            <!-- Bank Note Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="6" width="20" height="12" rx="2" />
+                                <circle cx="12" cy="12" r="2" />
+                                <line x1="6" y1="12" x2="6.01" y2="12" />
+                                <line x1="18" y1="12" x2="18.01" y2="12" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Facilidades de Pago</h4>
+                            <p>Se requiere un pie inicial del 50% al contratar y el saldo contra entrega del borrador,
+                                con opción de pago via WebPay.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item red-node">
+                        <div class="timeline-icon-node">
+                            <!-- Calendar Clock Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Entrega en 20 a 30 Días Hábiles</h4>
+                            <p>Compromiso de cumplimiento estricto con las fechas de audiencias preparatorias y de
+                                juicio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CONTACT BANNER -->
+        <section class="contact-banner">
+            <h2>Hablemos de tu caso <i class="fa-regular fa-envelope"></i></h2>
+            <h3>Evaluación de Situación y Agenda</h3>
+            <p class="contact-desc">
+                Escríbenos por mensaje directo (DM) o a nuestro WhatsApp para evaluar tu caso particular y agendar una
+                hora de atención.
+            </p>
+
+            <!-- WhatsApp Pill -->
+            <div class="whatsapp-pill">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+                <a href="https://wa.me/56948607518" target="_blank">+56 9 4860 7518</a>
+                <span class="separator">/</span>
+                <a href="https://wa.me/56962281143" target="_blank">+56 9 6228 1143</a>
+            </div>
+
+            <!-- Email Pill -->
+            <div class="email-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <a href="mailto:karla.apablaza@gmail.com">karla.apablaza@gmail.com</a>
+                <span class="separator">/</span>
+                <a href="mailto:li.gonzalezr.peritosocial@gmail.com">li.gonzalezr.peritosocial@gmail.com</a>
+            </div>
+        </section>
+
+        <!-- BOTTOM QUOTE & MISSION -->
+        <section class="quote-section">
+            <h3 class="quote-text">“Facilitamos tu acceso a la justicia con rigor, ética y empatía.”</h3>
+            <p class="mission-text">
+                Nuestra misión es brindar un servicio socio-jurídico humano que garantice la rigurosidad técnica ante
+                los tribunales.
+            </p>
+        </section>
+
+        <!-- FOOTER BRANDING -->
+        <footer>
+            <div class="branding">
+                <span>2026 Alianza Profesional de Peritaje Social Forense - Chile</span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
